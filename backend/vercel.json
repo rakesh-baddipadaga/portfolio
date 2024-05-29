@@ -1,0 +1,29 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "server.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "handle": "filesystem" },
+      {
+        "src": "/api/profile/(.*)",
+        "dest": "/server.js"
+      },
+      {
+        "src": "/api/image/(.*)",
+        "dest": "/server.js"
+      },
+      {
+        "src": "/api/vcard/(.*)",
+        "dest": "/server.js"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/server.js"
+      }
+    ],
+    "env": {
+      "MONGO_URI": "mongodb+srv://rakesh:rakesh@cluster0.41rmfzb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    }
+  }
+  
