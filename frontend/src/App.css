@@ -1,0 +1,305 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  overflow-y: auto; 
+  height: 100vh;
+  background-color: #061244;
+}
+
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+  width: 80%;
+  max-width: 500px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+.card1 {
+  background-color:#061249 ;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(29, 28, 28, 0.1);
+  padding: 20px;
+  margin: 20px;
+  width: 80%;
+  max-width: 500px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.photo-and-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-photo {
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.role {
+  margin: 10px 0;
+}
+
+.name {
+  margin: 10px 0;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #FD8031;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+}
+
+.about-me, .links, .contact {
+  margin-bottom: 20px;
+}
+
+.contact {
+  text-align: left;
+}
+
+.contact h3 {
+  color: #FD8031;
+}
+
+.links-container {
+  width: 100%;
+}
+
+.links {
+  width: 100%;
+}
+
+.links h2, .company-card h2 {
+  text-align: center;
+  color: #FF5733;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.3s;
+  position: relative;  
+}
+
+.link-item img {
+  width: 40px; 
+  height: 40px; 
+  margin-right: 15px;
+}
+
+.link-item span {
+  flex-grow: 1;
+}
+
+.link-item .arrow {
+  color: #FF5733;
+  font-size: 1.2em;
+  position: absolute;  
+  right: 10px;  
+}
+
+.link-item:hover {
+  background-color: #f0f0f0;
+}
+
+.company-link {
+  display: flex;
+  align-items: center;
+}
+
+.company-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.company-link img {
+  margin-bottom: 10px;
+}
+
+.company-link .arrow {
+  display: none;
+}
+
+.loader {
+  font-size: 24px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.bottom-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95%;
+  position: fixed;
+  bottom: 20px;
+  padding: 10px 20px;
+}
+
+.left-buttons {
+  display: flex;
+  gap: 10px; 
+}
+
+
+.left-button, .right-button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #FD8031;
+  color: white;
+  border: none;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s;
+}
+
+.right-button{
+  width: 130px;
+  border-radius: 40%;
+}
+.left-button{
+  width: 50px;
+  border-radius: 50%;
+}
+.left-button:hover, .right-button:hover {
+  background-color: #e06b28;
+}
+
+.right-button::after {
+  content: '+ ';
+}
+
+.hexagon-wrapper {
+  position: relative;
+  width: 20px; 
+  height: 11px;
+  margin: auto;
+}
+
+.hexagon-image {
+  width: 50%;
+  height: 20%;
+  clip-path: polygon(
+    50% 0%,
+    100% 25%,
+    100% 75%,
+    50% 100%,
+    0% 75%,
+    0% 25%
+  );
+  
+}
+
+
+.qr-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.qr-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.qr-content .photo-and-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  margin-bottom: 20px;
+}
+
+.qr-content .photo-and-info img {
+  width: 100px; 
+  height: 100px; 
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.wallet-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.wallet-button {
+  flex: 1;
+  padding: 10px;
+  margin: 0 5px;
+  background-color: #061244;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-button {
+  position: absolute; /* Absolute positioning for top left placement */
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  background-color: #FD8031;
+  border-radius: 50%;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+
