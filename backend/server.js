@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
-const userRoutes=require('./routes/profile');
+const userRoutes=require('./routes/Profile');
 const imageRoutes=require('./routes/imagerouter');
 const vcardRoutes=require('./routes/vcardroutes');
 
