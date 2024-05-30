@@ -88,6 +88,9 @@ body, html {
 
 .contact {
   text-align: left;
+  word-wrap: break-word; 
+  word-break: break-word; 
+  white-space: normal; 
 }
 
 .contact h3 {
