@@ -37,7 +37,7 @@ const App = () => {
         link.href = url;
       };
 
-      setFavicon(`http://localhost:5000/api/images/${data.profilePictureId}`);
+      setFavicon(`https://portfolio-backend1-eta.vercel.app/api/images/${data.profilePictureId}`);
     }
   }, [data]);
   useEffect(() => {
@@ -62,7 +62,7 @@ const App = () => {
   const downloadVCard =async () => {
 
     try {
-      const response = await fetch('http://localhost:5000/api/vcard/download-vcard');
+      const response = await fetch('https://portfolio-backend1-eta.vercel.app/api/vcard/download-vcard');
       if (response.ok) {
         const vcardData = await response.text();
         const blob = new Blob([vcardData], { type: 'text/vcard;charset=utf-8' });

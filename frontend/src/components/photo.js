@@ -15,7 +15,7 @@ const ProfileImage = ({ imageId }) => {
     console.log(id);
     console.log("hello");
     try {
-      const response = await fetch(`http://localhost:5000/api/image/${id}`);
+      const response = await fetch(`https://portfolio-backend1-eta.vercel.app/api/image/${id}`);
       console.log(id);
       if (!response.ok) {
         throw new Error('Failed to fetch image');
@@ -23,7 +23,7 @@ const ProfileImage = ({ imageId }) => {
       const blob = await response.blob();
       setImageSrc(URL.createObjectURL(blob));
     } catch (error) {
-      console.error('Error fetching image:', error);
+      console.error('Error fetching imaage:', error);
     }
   };
 
