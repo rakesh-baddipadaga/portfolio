@@ -11,6 +11,10 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the API');
+});
+
 
 app.use('/api/profile', userRoutes);
 app.use('/api/image', imageRoutes);
